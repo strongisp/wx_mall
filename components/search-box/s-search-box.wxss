@@ -1,0 +1,16 @@
+/* components/search_box/s_search_box.wxss */
+.search-box {
+	height: 90rpx;
+	padding: 14rpx;
+	background-color: var(--themeColor);
+}
+
+.navigator {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 15rpx;
+	color: #666;
+}

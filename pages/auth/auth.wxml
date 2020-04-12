@@ -1,0 +1,4 @@
+<!-- pages/auth/auth.wxml -->
+<button open-type="getUserInfo" type="primary" plain bindgetuserinfo="handleGetUserInfo">
+    获取授权
+</button>

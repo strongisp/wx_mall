@@ -1,0 +1,61 @@
+page {
+  height: 100%;
+}
+.cates {
+  height: 100%;
+}
+.cates .cates_container {
+  height: calc( 100vh - 90rpx);
+  display: flex;
+}
+.cates .cates_container .left_box {
+  width: 214rpx;
+  overflow: hidden;
+}
+.cates .cates_container .left_box .left_menu {
+  border-right: 2rpx solid #eee;
+  background-color: #fdfafa;
+  height: 100%;
+  width: 110%;
+}
+.cates .cates_container .left_box .left_menu .menu_item {
+  padding-right: 10%;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  border-left: 5rpx solid #eee;
+}
+.cates .cates_container .left_box .left_menu .active {
+  color: var(--themeColor);
+  border-left: 5rpx solid currentColor;
+}
+.cates .cates_container .right_content {
+  flex: 1;
+}
+.cates .cates_container .right_content .goods_group .goods_title {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cates .cates_container .right_content .goods_group .goods_title .delimiter {
+  color: #ccc;
+  padding: 0 10rpx;
+}
+.cates .cates_container .right_content .goods_group .goods_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cates .cates_container .right_content .goods_group .goods_list navigator {
+  width: 33.33%;
+  text-align: center;
+  padding: 30rpx 0;
+}
+.cates .cates_container .right_content .goods_group .goods_list navigator image {
+  width: 50%;
+}
+.cates .cates_container .right_content .goods_group .goods_list navigator .goods_name {
+  font-size: 24rpx;
+}

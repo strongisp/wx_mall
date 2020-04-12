@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "s-search-box": "../../components/search-box/s-search-box",
+    "s-tabs": "../../components/tabs/s-tabs"
+  },
+  "navigationBarTitleText": "商品列表",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

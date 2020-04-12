@@ -1,0 +1,74 @@
+/* pages/home/home.wxss */
+
+/* 
+.home {
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+} */
+
+/* ::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+  display: none;
+} */
+
+.store_page {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.SRswiper {
+  width: 750rpx;
+  height: 340rpx;
+}
+
+.SRimg {
+  width: 100%;
+}
+
+.home_cates {
+  display: flex;
+}
+
+.CSnavigator {
+  flex: 1;
+  padding: 26rpx;
+}
+
+.CSimg {
+  width: 100%;
+}
+
+.FRlist {
+  overflow: hidden;
+  padding: 0 10rpx;
+}
+
+.FRimg1 {
+  width: 100%;
+}
+
+.FRnavigator {
+  float: left;
+  width: 33.33%;
+}
+
+.FRnavigator:nth-last-child(-n+4) {
+  height: calc(33.33vw * 386 / 232 /2 - 5rpx);
+  /* height: 27.72711207vw; */
+  border-left: 10rpx solid #fff;
+}
+
+.FRnavigator:nth-child(2), .FRnavigator:nth-child(3) {
+  border-bottom: 10rpx solid #fff;
+}
+
+.FRimg2 {
+  width: 100%;
+  height: 100%;
+}

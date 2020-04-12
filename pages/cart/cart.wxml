@@ -1,0 +1,91 @@
+<!-- pages/cart/cart.wxml -->
+<!-- 收货地址按钮开始 -->
+<view class="revice_address_row">
+    <!-- 当收货地址不存在的时候，显示按钮 -->
+    <view class="address_btn" wx:if="{{!address.userName}}">
+        <button bindtap="handleChooseAddress" type="primary">选择收货地址</button>
+    </view>
+    <!-- 当收货地址存在的时候，显示详细信息 -->
+    <view wx:else class="user_info_row">
+        <view class="user_info">
+            <view class="user_name">
+                <text>收货人：</text>
+                {{address.userName}}
+            </view>
+            <view class="user_site">
+                <view class="site iconfont icon-dizhi1"></view>
+                {{address.provinceName + address.cityName + address.countyName + address.detailInfo}}
+            </view>
+        </view>
+        <view class="user_phone">{{address.telNumber}}</view>
+        <!-- 重新选择地址 -->
+    </view>
+    <view class="address_btn" wx:if="{{address.userName}}">
+        <button bindtap="handleChooseAddress2" type="primary">重新选择收货地址</button>
+    </view>
+</view>
+<!-- 收货地址按钮结束 -->
+<!-- 购物车商品开始 -->
+<view class="cart_content">
+    <view class="cart_title">全部商品({{allGoods}})</view>
+    <view class="cart_main">
+        <!-- 当cart数组 长度不为0的时候 显示商品信息 -->
+        <block wx:if="{{cart.length!==0}}">
+            <view class="cart_item" wx:for="{{cart}}" wx:key="goods_id">
+                <!-- 复选框 -->
+                <view class="cart_chk_wrap">
+                    <checkbox-group data-id="{{item.goods_id}}" bindchange="handeItemChange">
+                        <checkbox checked="{{item.checked}}"></checkbox>
+                    </checkbox-group>
+                </view>
+                <!-- 商品图片 -->
+                <navigator class="cart_img_wrap" url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}">
+                    <image mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'http://img4.imgtn.bdimg.com/it/u=1139674223,3291216537&fm=26&gp=0.jpg'}}" />
+                </navigator>
+                <!-- 商品信息 -->
+                <view class="cart_info_wrap">
+                    <view class="goods_name">{{item.goods_name}}</view>
+                    <view class="goods_price_wrap">
+                        <view class="goods_price">￥{{item.goods_price}}</view>
+                        <view class="cart_num_tool">
+                            <view bindtap="handleItemNumEdt" data-id="{{item.goods_id}}" data-operation="{{-1}}" class="num_edit">
+                                -
+                            </view>
+                            <view class="goods_num">{{item.num}}</view>
+                            <view bindtap="handleItemNumEdt" data-id="{{item.goods_id}}" data-operation="{{1}}" class="num_edit">
+                                +
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <!-- 购物车为空时显示的 图片 -->
+        <block wx:else>
+            <image class="goods_void" mode="widthFix" src="http://hbimg.b0.upaiyun.com/e1b1467beea0a9c7d6a56b32bac6d7e5dcd914f7c3e6-YTwUd6_fw658" />
+        </block>
+    </view>
+</view>
+<!-- 购物车商品结束 -->
+<!-- 底部工具栏开始 -->
+<view class="footer_tool">
+    <!-- 全选 -->
+    <view class="all_chk_wrap">
+        <checkbox-group bindchange="handleItemAllCheck">
+            <checkbox checked="{{allChecked}}">全选</checkbox>
+        </checkbox-group>
+    </view>
+    <!-- 总价格 -->
+    <view class="total_price_wrap">
+        <view class="total_price">
+            <text>合计：</text>
+            <text class="total_price_text">￥{{totalPrice}}</text>
+            <view>包含运费</view>
+        </view>
+    </view>
+    <!-- 结算 -->
+    <view class="order_pay_wrap" bindtap="handlePay">
+        <text>结算({{totalNum}})</text>
+    </view>
+</view>
+<!-- 底部工具栏结束 -->

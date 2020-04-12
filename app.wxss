@@ -1,0 +1,24 @@
+/**app.wxss**/
+
+/* 导入全局，字体图标 */
+
+@import '/assets/iconfont/iconfont.wxss';
+/* 初始化样式 */
+
+page, view, text, swiper, swiper-item, image, navigator {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* 主题颜色，通过变量方式：less、css、wxss都支持变量 
+		定义方式：通过--；
+		使用方式： color:var(--themeColor);
+*/
+
+page {
+	/* 定义主题颜色 */
+	--themeColor: #eb4450;
+	/* 定义统一的字体大小 */
+	font-size: 28rpx;
+}

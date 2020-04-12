@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "s-search-box": "../../components/search-box/s-search-box"
+  },
+  "navigationBarTitleText": "益优购-分类"
+}

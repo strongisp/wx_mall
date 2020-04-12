@@ -1,0 +1,49 @@
+<!-- pages/goods_detail/goods_detail.wxml -->
+<!-- 轮播开始 -->
+<view class="detaile_swiper">
+    <swiper indicator-dots circular indicator-active-color="#eb4450" autoplay interval="4000" easing-function="easeInOutCubic">
+        <swiper-item wx:for="{{goodsData.pics}}" wx:key="pics_id" bindtap="handlePrevewImage" data-url="{{item.pics_mid}}">
+            <image mode="center" src="{{item.pics_mid}}" />
+        </swiper-item>
+    </swiper>
+</view>
+<!-- 轮播结束 -->
+<!-- 商品价格、标题开始 -->
+<view class="goods_price">￥{{goodsData.goods_price}}</view>
+<view class="goods_name_row">
+    <view class="goods_name">{{goodsData.goods_name}}</view>
+    <view class="goods_collect">
+        <text class="iconfont {{isCollect?'icon-shoucang4':'icon-shoucang1'}}" bindtap="handleCollect"></text>
+        <view class="collect_text">收藏</view>
+    </view>
+</view>
+<!-- 商品价格、标题结束 -->
+<!-- 图文详情开始 -->
+<view class="goods_info">
+    <view class="goods_info_title">图文详情</view>
+    <view class="goods_info_content">
+        <!-- rich-text：用于解析html文本字符串，转换成html进行渲染 -->
+        <rich-text nodes="{{goodsData.goods_introduce}}"></rich-text>
+    </view>
+</view>
+<!-- 图文详情结束 -->
+<!-- 底部工具栏开始 -->
+<view class="btm_tool">
+    <view class="tool_item">
+        <view class="iconfont icon-kefu1"></view>
+        <view>客服</view>
+        <button open-type="contact"></button>
+    </view>
+    <view class="tool_item ">
+        <view class="iconfont icon-fenxiang"></view>
+        <view>分享</view>
+        <button open-type="share"></button>
+    </view>
+    <navigator open-type="switchTab" url="/pages/cart/cart" class="tool_item">
+        <view class="iconfont icon-ShoppingCart"></view>
+        <view>购物车</view>
+    </navigator>
+    <view bindtap="handleCartAdd" class="tool_item btn_cart">加入购物车</view>
+    <view class="tool_item btn_buy">立即购买</view>
+</view>
+<!-- 底部工具栏结束 -->

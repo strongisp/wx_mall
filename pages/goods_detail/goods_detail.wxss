@@ -1,0 +1,129 @@
+/* pages/goods_detail/goods_detail.wxss */
+
+page {
+  padding-bottom: 90rpx;
+}
+
+.detaile_swiper swiper {
+  width: 100vw;
+  height: 65vw;
+}
+
+.detaile_swiper swiper swiper-item image {
+  width: 100%;
+}
+
+.goods_price {
+  color: var(--themeColor);
+  font-size: 34rpx;
+  font-weight: 600;
+  padding: 12rpx;
+}
+
+.goods_name_row {
+  display: flex;
+  border-top: 1rpx solid #aaa;
+  border-bottom: 1rpx solid #aaa;
+  padding: 10rpx 0;
+}
+
+.goods_name_row .goods_name {
+  flex: 5;
+  color: #333;
+  font-size: 28rpx;
+  padding: 0 10rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.goods_name_row .goods_collect {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 1rpx solid #bababa;
+}
+
+.goods_name_row .goods_collect .collect_text {
+  font-size: 26rpx;
+}
+
+.goods_info {
+  border-top: 20rpx solid #eee;
+}
+
+.goods_info .goods_info_title {
+  font-size: 30rpx;
+  color: var(--themeColor);
+  font-weight: 600;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #333;
+  border-bottom: 20rpx solid #eee;
+}
+
+.goods_info .goods_info_content {
+  padding-top: 20rpx;
+}
+
+.btm_tool {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90rpx;
+  background-color: #fff;
+  display: flex;
+  color: #333;
+  font-size: 24rpx;
+  border-top: 1rpx solid #eee;
+  box-shadow: 0 6rpx 10rpx #000000;
+}
+
+.btm_tool .iconfont {
+  font-size: 30rpx;
+}
+
+.btm_tool .tool_item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.btm_tool .tool_item button {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.btm_tool .btn_cart {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffa500;
+  color: #fff;
+}
+
+.btm_tool .btn_buy {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eb4450;
+  color: #fff;
+}
+
+.icon-shoucang4 {
+  color: #eb4450;
+}
